@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const sh = require('shorthash');
 
 const Schema = mongoose.Schema;
 
@@ -8,14 +9,11 @@ const urlSchema = new Schema({
         type : String,
         required : true
     },
-    OriginalUrl : {
+    originalUrl : {
         type : String,
         required : true
     },
-    tags : {
-        type : [String],
-        required : true
-    },
+    tags: [ String ],
     hashedUrl : {
         type : String
     },
@@ -24,6 +22,14 @@ const urlSchema = new Schema({
         default : Date.now
     }
 })
+
+urlSchema.pre('save',function(next) {
+    if(!this.hashedUrl){
+        this.hashedUrl = sh.unique(`${this.OriginalUrl}`);
+    }
+    next();
+})
+
 
 const Url = mongoose.model('Url',urlSchema);
 
