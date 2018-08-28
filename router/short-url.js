@@ -19,9 +19,17 @@ router.get('/',(req,res) => {
     })
 });
 
+router.get('/:id',(req,res) => {
+    Url.findById(req.params.id).then((url) => {
+        res.send(url);
+    }) .catch((err) => {
+        res.send(err);
+    });
+});
+
 router.post('/',(req,res) => {
     let body = _.pick(req.body,['title','originalUrl','tags']);
-    
+
     let url = new Url(body);
 
     url.save() .then((url) => {
@@ -30,6 +38,67 @@ router.post('/',(req,res) => {
         res.send(err);
     })
 });
+
+router.put('/:id',(req,res) => {
+    let id = req.params.id;
+    let body = req.body;
+    Url.findByIdAndUpdate(id,{ $set : body}, {new : true}) .then((url) => {
+        res.send(url);
+    }) .catch((err) => {
+        res.send(err);
+    })
+});
+
+router.delete('/:id',(req,res) => {
+    Url.findByIdAndRemove(req.params.id).then((url) => {
+        if(url){
+            res.send({
+                url,
+                notice:'sucessfully deleted'
+            });
+        } else{
+            res.send({
+                notice:'url not found'
+            });
+        }
+    }).catch(err => res.send(err));
+});
+
+router.get('/hashedUrl/:hash',(req,res) => {
+    let params = req.params.hash;
+    Url.find({hashedUrl : params}) .then((url) => {
+        res.send(url);
+    }) .catch((err) => {
+        res.send(err);
+    });
+});
+
+router.get('/data/tags/:name',(req,res) => {
+    let params = req.params.name;
+    Url.find({tags : params}) .then((url) => {
+        if(url.length !== 0) {
+            res.send(url);
+        } else {
+            res.send({
+                notice : 'Tag not found'
+            })
+        }
+    });
+});
+
+router.get('/info/tags',(req,res) => {
+    let query = req.query.names.split(',');
+    Url.find({tags : { "$in" : query}}) .then((url) => {
+        if(url.length !== 0) {
+            res.send(url);
+        } else {
+            res.send({
+                notice : 'Tag not found'
+            })
+        }
+    })
+    
+})
 
 module.exports = {
     UrlRouter : router

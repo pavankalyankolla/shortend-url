@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 const sh = require('shorthash');
 
+const validator = require('validator');
+
 const Schema = mongoose.Schema;
 
 const urlSchema = new Schema({
@@ -11,7 +13,16 @@ const urlSchema = new Schema({
     },
     originalUrl : {
         type : String,
-        required : true
+        required : true,
+        validate : {
+            validator : function(value) {
+                return validator.isURL(value);
+            },
+            message : function(props) {
+                return `${props.path} is not valid`
+            }
+            
+        }
     },
     tags: [ String ],
     hashedUrl : {
@@ -25,7 +36,7 @@ const urlSchema = new Schema({
 
 urlSchema.pre('save',function(next) {
     if(!this.hashedUrl){
-        this.hashedUrl = sh.unique(`${this.OriginalUrl}`);
+        this.hashedUrl = sh.unique(`${this.originalUrl}`);
     }
     next();
 })
