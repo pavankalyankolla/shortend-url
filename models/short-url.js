@@ -31,7 +31,16 @@ const urlSchema = new Schema({
     created : {
         type : Date,
         default : Date.now
-    }
+    },
+
+    clicks : [ {
+         dateAndTime : {  type : Date, default:Date.now   },
+         ipAddress : { type : String},
+         browserName : { type : String},
+         osType : { type : String },
+         DeviceType : { type : String}
+     } ]
+
 })
 
 urlSchema.pre('save',function(next) {
