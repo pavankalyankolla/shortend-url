@@ -66,10 +66,20 @@ router.delete('/:id',(req,res) => {
 
 router.get('/hashedUrl/:hash',(req,res) => {
     let params = req.params.hash;
-    Url.find({hashedUrl : params}) .then((url) => {
+    let info = {
+        ipAddress : req.ip,
+        browserName : req.useragent.browser,
+        osType : req.useragent.os,
+        DeviceType : req.useragent.isDesktop ? 'Desktop' : 'Mobile'
+    }
+    Url.findOneAndUpdate({hashedUrl : params},{
+        $push : {
+            clicks : info
+        }
+    },{ new : true}) .then((url) => {
         res.send(url);
     }) .catch((err) => {
-        res.send(err);
+        res.status(400).send(err);
     });
 });
 
