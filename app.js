@@ -7,7 +7,7 @@ const useragent = require('express-useragent');
 
 const { UrlRouter } = require('./router/short-url');
 
-const fs = require('fs');
+const fs = require('fs-extra');
 const path = require('path');
 
 
@@ -25,13 +25,13 @@ let accessStream = fs.createWriteStream(path.join('./logs','access.log') , {flag
 
 app.use(morgan(function(tokens,req,res){
     return [ `Started : ${tokens.method(req,res)} : ${tokens.url(req,res)} for ${req.ip} at ${new Date()}
-            Completed : ${tokens.status(req,res)} in  ${tokens['response-time'](req, res)}ms \n` ]
+              Completed : ${tokens.status(req,res)} in  ${tokens['response-time'](req, res)}ms \n` ]
 },{ stream : accessStream}));
 
 //middleware in console
 app.use(morgan(function(tokens,req,res){
     return [ `Started : ${tokens.method(req,res)} : ${tokens.url(req,res)} for ${req.ip} at ${new Date()}
-            Completed : ${tokens.status(req,res)} in  ${tokens['response-time'](req, res)}ms ` ]
+              Completed : ${tokens.status(req,res)} in  ${tokens['response-time'](req, res)}ms ` ]
 }))
 
 
