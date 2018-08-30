@@ -1,0 +1,9 @@
+Started : GET : /url for ::1 at Thu Aug 30 2018 15:07:10 GMT+0530 (India Standard Time)
+            Completed : 200 in  105.597ms 
+
+Started : GET : /url for ::1 at Thu Aug 30 2018 15:07:31 GMT+0530 (India Standard Time)
+            Completed : 200 in  23.416ms 
+
+Started : GET : /url/info/tags?names=Git for ::1 at Thu Aug 30 2018 15:08:42 GMT+0530 (India Standard Time)
+            Completed : 200 in  176.982ms 
+
