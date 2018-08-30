@@ -20,7 +20,7 @@ router.get('/',(req,res) => {
 });
 
 router.get('/:id',(req,res) => {
-    Url.findById(req.params.id).then((url) => {
+    Url.findById((req.params.id),{clicks : {$slice : 3}}).then((url) => {
         res.send(url);
     }) .catch((err) => {
         res.send(err);
@@ -72,14 +72,11 @@ router.get('/hashedUrl/:hash',(req,res) => {
         osType : req.useragent.os,
         DeviceType : req.useragent.isDesktop ? 'Desktop' : 'Mobile'
     }
-    Url.findOneAndUpdate({hashedUrl : params},{
-        $push : {
-            clicks : info
-        }
-    },{ new : true}) .then((url) => {
+    Url.findOneAndUpdate({hashedUrl : params},{ $push : { clicks : info } },{ new : true}) 
+    .then((url) => {
         res.send(url);
     }) .catch((err) => {
-        res.status(400).send(err);
+        res.send(err);
     });
 });
 

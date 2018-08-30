@@ -17,9 +17,14 @@ app.use(useragent.express());
 app.use(bodyParser.json());
 app.use(morgan('dev'));
 
-
 app.use('/url',UrlRouter);
 
+app.use(function (req,res,next){
+    res.status(404);
+    res.send({
+        notice : '404 -The resource you are looking for doesn’t exist'
+    })
+})
 app.listen(port,() => {
     console.log('listening port',port);
 })
