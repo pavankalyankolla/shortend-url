@@ -11,6 +11,19 @@ const router = express.Router();
 //         msg : 'Welcome to Url-Shortner'
 //     })
 // })
+//template engine pug
+// router.get('/', function (req, res) {
+//     res.render('index', { title: 'Hey', message: 'Hello there!' })
+//   });
+
+router.get('/table',function(req,res) {
+      Url.find().then((url) => {
+          res.render('index',{users: url})
+      })
+    });
+
+
+
 router.get('/',(req,res) => {
     Url.find().then((url) => {
         res.send(url);

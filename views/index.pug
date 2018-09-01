@@ -1,0 +1,28 @@
+html
+  head
+    title= title
+  body
+    h2
+  table(border="1")
+    thead
+      tr
+        th='id'
+        th='tags'
+        th='title'
+        th='originalUrl'
+        th='hashedUrl'
+    
+    tbody 
+      -for(var i=0;i<users.length;i++){
+        tr
+        td= `${users[i].id}`  
+        td= `${users[i].tags}`
+        td= `${users[i].title}`
+        td= `${users[i].originalUrl}`
+        td= `${users[i].hashedUrl}`
+
+      -}
+     
+       
+
+      
