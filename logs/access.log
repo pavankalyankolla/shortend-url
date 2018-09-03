@@ -214,3 +214,9 @@ Started : GET : /table for ::1 at Mon Sep 03 2018 16:12:51 GMT+0530 (India Stand
 Started : GET : /url/table for ::1 at Mon Sep 03 2018 16:14:43 GMT+0530 (India Standard Time)
               Completed : 304 in  12711.375ms 
 
+Started : GET : /url for ::ffff:127.0.0.1 at Mon Sep 03 2018 16:57:51 GMT+0530 (India Standard Time)
+              Completed : 304 in  1080.278ms 
+
+Started : GET : /favicon.ico for ::ffff:127.0.0.1 at Mon Sep 03 2018 16:57:52 GMT+0530 (India Standard Time)
+              Completed : 404 in  2.449ms 
+
