@@ -220,3 +220,39 @@ Started : GET : /url for ::ffff:127.0.0.1 at Mon Sep 03 2018 16:57:51 GMT+0530 (
 Started : GET : /favicon.ico for ::ffff:127.0.0.1 at Mon Sep 03 2018 16:57:52 GMT+0530 (India Standard Time)
               Completed : 404 in  2.449ms 
 
+Started : GET : /users for ::1 at Tue Sep 04 2018 19:35:47 GMT+0530 (India Standard Time)
+              Completed : 200 in  12.127ms 
+
+Started : POST : /users for ::1 at Tue Sep 04 2018 19:36:59 GMT+0530 (India Standard Time)
+              Completed : 400 in  107.064ms 
+
+Started : POST : /users for ::1 at Tue Sep 04 2018 19:37:02 GMT+0530 (India Standard Time)
+              Completed : 400 in  8.970ms 
+
+Started : POST : /users for ::1 at Tue Sep 04 2018 19:38:56 GMT+0530 (India Standard Time)
+              Completed : 400 in  124.196ms 
+
+Started : POST : /users for ::ffff:127.0.0.1 at Tue Sep 04 2018 19:42:29 GMT+0530 (India Standard Time)
+              Completed : 400 in  106.982ms 
+
+Started : GET : /url for ::1 at Tue Sep 04 2018 20:02:55 GMT+0530 (India Standard Time)
+              Completed : 304 in  94.370ms 
+
+Started : GET : /url/users for ::1 at Tue Sep 04 2018 20:02:59 GMT+0530 (India Standard Time)
+              Completed : 200 in  18.868ms 
+
+Started : GET : /favicon.ico for ::1 at Tue Sep 04 2018 20:03:00 GMT+0530 (India Standard Time)
+              Completed : 404 in  1.330ms 
+
+Started : GET : /url/ for ::1 at Tue Sep 04 2018 20:03:06 GMT+0530 (India Standard Time)
+              Completed : 200 in  16.441ms 
+
+Started : POST : /users for ::1 at Tue Sep 04 2018 20:07:11 GMT+0530 (India Standard Time)
+              Completed : 400 in  128.740ms 
+
+Started : POST : /users for ::1 at Tue Sep 04 2018 20:14:16 GMT+0530 (India Standard Time)
+              Completed : 200 in  2200.319ms 
+
+Started : POST : /users for ::1 at Tue Sep 04 2018 20:15:15 GMT+0530 (India Standard Time)
+              Completed : 200 in  25.267ms 
+

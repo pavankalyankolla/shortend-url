@@ -5,7 +5,12 @@ const _ = require('lodash');
 const sh = require('shorthash');
 const useragent = require('express-useragent');
 
+const { Url } = require('./models/short-url');
+const { User } = require('./models/user');
+
 const { UrlRouter } = require('./router/short-url');
+const { usersRouter } = require('./router/user');
+
 
 const fs = require('fs-extra');
 const path = require('path');
@@ -38,6 +43,7 @@ app.use(morgan(function(tokens,req,res){
 
 
 app.use('/url',UrlRouter);
+app.use('/users',usersRouter);
 
 app.use(function (req,res,next){
     res.status(404);
