@@ -27,6 +27,25 @@ router.post('/',(req,res) => {
     })
 });
 
+//custom middleware
+let authenticationUser = ((req,res,next) => {
+    let token = req.header('x-auth');
+    User.findByToken(token).then((user) => {
+        req.locals = {
+            user,
+            token
+        }
+        next();
+    }) .catch((err) => {
+        res.status(401).send(err);
+    })
+});
+
+//user profile
+router.get('/profile',authenticationUser,(req,res) => {
+    res.send(req.locals.user);
+})
+
 
 module.exports = {
     usersRouter : router

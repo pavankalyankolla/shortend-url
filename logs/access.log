@@ -256,3 +256,21 @@ Started : POST : /users for ::1 at Tue Sep 04 2018 20:14:16 GMT+0530 (India Stan
 Started : POST : /users for ::1 at Tue Sep 04 2018 20:15:15 GMT+0530 (India Standard Time)
               Completed : 200 in  25.267ms 
 
+Started : GET : /users for ::1 at Wed Sep 05 2018 22:24:01 GMT+0530 (India Standard Time)
+              Completed : 200 in  244.987ms 
+
+Started : GET : /users/profile for ::1 at Wed Sep 05 2018 22:25:23 GMT+0530 (India Standard Time)
+              Completed : 200 in  75.968ms 
+
+Started : GET : /users/profile for ::1 at Wed Sep 05 2018 22:25:33 GMT+0530 (India Standard Time)
+              Completed : 401 in  2.699ms 
+
+Started : GET : /users/profile for ::1 at Wed Sep 05 2018 22:25:40 GMT+0530 (India Standard Time)
+              Completed : 401 in  1.154ms 
+
+Started : GET : /users/profile for ::1 at Wed Sep 05 2018 22:25:52 GMT+0530 (India Standard Time)
+              Completed : 200 in  11.966ms 
+
+Started : GET : /users/profile for ::1 at Wed Sep 05 2018 22:26:22 GMT+0530 (India Standard Time)
+              Completed : 200 in  7.889ms 
+
