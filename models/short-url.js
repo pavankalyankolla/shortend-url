@@ -39,7 +39,12 @@ const urlSchema = new Schema({
          browserName : { type : String},
          osType : { type : String },
          DeviceType : { type : String}
-     } ]
+     } ],
+
+     user: {
+        type : Schema.Types.ObjectId,
+        ref : 'User'
+    }
 
 })
 

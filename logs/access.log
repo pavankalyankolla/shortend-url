@@ -274,3 +274,78 @@ Started : GET : /users/profile for ::1 at Wed Sep 05 2018 22:25:52 GMT+0530 (Ind
 Started : GET : /users/profile for ::1 at Wed Sep 05 2018 22:26:22 GMT+0530 (India Standard Time)
               Completed : 200 in  7.889ms 
 
+Started : GET : /users for ::1 at Fri Sep 07 2018 10:03:36 GMT+0530 (India Standard Time)
+              Completed : 200 in  1982.316ms 
+
+Started : POST : /url for ::1 at Fri Sep 07 2018 10:11:43 GMT+0530 (India Standard Time)
+              Completed : 500 in  29.188ms 
+
+Started : POST : /url for ::1 at Fri Sep 07 2018 10:11:47 GMT+0530 (India Standard Time)
+              Completed : 500 in  4.016ms 
+
+Started : POST : /users for ::1 at Fri Sep 07 2018 10:12:06 GMT+0530 (India Standard Time)
+              Completed : 200 in  659.751ms 
+
+Started : POST : /url for ::1 at Fri Sep 07 2018 10:14:25 GMT+0530 (India Standard Time)
+              Completed : 500 in  8.199ms 
+
+Started : POST : /url for ::1 at Fri Sep 07 2018 10:16:10 GMT+0530 (India Standard Time)
+              Completed : 500 in  52.242ms 
+
+Started : POST : /url for ::1 at Fri Sep 07 2018 10:33:30 GMT+0530 (India Standard Time)
+              Completed : 500 in  37.878ms 
+
+Started : POST : /url for ::1 at Fri Sep 07 2018 10:40:19 GMT+0530 (India Standard Time)
+              Completed : 500 in  37.549ms 
+
+Started : POST : /users for ::1 at Sat Sep 08 2018 15:29:11 GMT+0530 (India Standard Time)
+              Completed : 200 in  693.894ms 
+
+Started : GET : /url for ::1 at Sat Sep 08 2018 15:42:11 GMT+0530 (India Standard Time)
+              Completed : 200 in  44.608ms 
+
+Started : GET : /users for ::1 at Sat Sep 08 2018 15:43:33 GMT+0530 (India Standard Time)
+              Completed : 200 in  22.545ms 
+
+Started : POST : /users for ::1 at Sat Sep 08 2018 15:44:53 GMT+0530 (India Standard Time)
+              Completed : 200 in  450.765ms 
+
+Started : GET : /url for ::1 at Sat Sep 08 2018 15:45:19 GMT+0530 (India Standard Time)
+              Completed : 200 in  4.951ms 
+
+Started : GET : /url for ::1 at Sat Sep 08 2018 15:46:27 GMT+0530 (India Standard Time)
+              Completed : 200 in  4.055ms 
+
+Started : GET : /urls for ::1 at Sat Sep 08 2018 15:46:32 GMT+0530 (India Standard Time)
+              Completed : 404 in  1.406ms 
+
+Started : POST : /url for ::1 at Sat Sep 08 2018 15:48:14 GMT+0530 (India Standard Time)
+              Completed : 500 in  14.477ms 
+
+Started : POST : /url for ::1 at Sat Sep 08 2018 15:50:43 GMT+0530 (India Standard Time)
+              Completed : 500 in  3.910ms 
+
+Started : POST : /url for ::1 at Sat Sep 08 2018 15:51:31 GMT+0530 (India Standard Time)
+              Completed : 500 in  74.898ms 
+
+Started : POST : /url for ::1 at Sat Sep 08 2018 15:52:04 GMT+0530 (India Standard Time)
+              Completed : 500 in  38.174ms 
+
+Started : POST : /url for ::1 at Sat Sep 08 2018 15:53:19 GMT+0530 (India Standard Time)
+              Completed : 500 in  12.120ms 
+
+Started : POST : /url for ::1 at Sat Sep 08 2018 15:54:00 GMT+0530 (India Standard Time)
+              Completed : 500 in  5.172ms 
+
+Started : POST : /url for ::1 at Sat Sep 08 2018 15:59:41 GMT+0530 (India Standard Time)
+              Completed : 200 in  1753.226ms 
+
+Started : GET : /url for ::1 at Sat Sep 08 2018 16:00:37 GMT+0530 (India Standard Time)
+              Completed : 401 in  4.570ms 
+
+Started : GET : /url for ::1 at Sat Sep 08 2018 16:00:46 GMT+0530 (India Standard Time)
+              Completed : 401 in  1.929ms 
+
+Started : GET : /users for ::1 at Sat Sep 08 2018 16:01:18 GMT+0530 (India Standard Time)
+              Completed : 200 in  15.329ms 
+

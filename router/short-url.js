@@ -3,6 +3,8 @@ const { Url } = require('../models/short-url');
 const mongoose = require('../config/db');
 
 const _ = require('lodash');
+const { authenticateUser } = require('../middleware/authentication');
+
 
 const router = express.Router();
 
@@ -24,7 +26,7 @@ router.get('/table',function(req,res) {
 
 
 
-router.get('/',(req,res) => {
+router.get('/',authenticateUser,(req,res) => {
     Url.find().then((url) => {
         res.send(url);
     }) .catch((err) => {
@@ -32,7 +34,7 @@ router.get('/',(req,res) => {
     })
 });
 
-router.get('/:id',(req,res) => {
+router.get('/:id',authenticateUser,(req,res) => {
     Url.findById((req.params.id),{clicks : {$slice : 3}}).then((url) => {
         res.send(url);
     }) .catch((err) => {
@@ -40,11 +42,11 @@ router.get('/:id',(req,res) => {
     });
 });
 
-router.post('/',(req,res) => {
+router.post('/',authenticateUser,(req,res) => {
     let body = _.pick(req.body,['title','originalUrl','tags']);
 
     let url = new Url(body);
-
+    url.user = req.locals.user._id;
     url.save() .then((url) => {
         res.send(url);
     }) .catch((err) => {
@@ -52,7 +54,7 @@ router.post('/',(req,res) => {
     })
 });
 
-router.put('/:id',(req,res) => {
+router.put('/:id',authenticateUser,(req,res) => {
     let id = req.params.id;
     let body = req.body;
     Url.findByIdAndUpdate(id,{ $set : body}, {new : true}) .then((url) => {
@@ -62,7 +64,7 @@ router.put('/:id',(req,res) => {
     })
 });
 
-router.delete('/:id',(req,res) => {
+router.delete('/:id',authenticateUser,(req,res) => {
     Url.findByIdAndRemove(req.params.id).then((url) => {
         if(url){
             res.send({
