@@ -1,6 +1,7 @@
 const express = require('express');
 const _ = require('lodash');
 const { User } = require('../models/user');
+const { authenticateUser } = require('../middleware/authentication');
 const router = express.Router();
 
 // router.get('/',(req,res) => {
@@ -39,6 +40,30 @@ let authenticationUser = ((req,res,next) => {
     }) .catch((err) => {
         res.status(401).send(err);
     })
+});
+
+//login route
+router.post('/login',(req,res) => {
+    let body = _.pick(req.body,['email','password']);
+    User.findByEmailAndPassword(body.email,body.password)
+    .then((user) => {
+        return user.generateToken();
+    }) .then((token) => {
+        res.header('x-auth',token).send()
+    })
+    .catch((err) => {
+        res.send(err);
+    });
+});
+
+
+//logout
+router.delete('/logout',authenticateUser,(req,res) => {
+    req.locals.user.deleteToken(req.locals.token).then(() => {
+        res.send();
+    }) .catch((err) => {
+        res.send(err);
+    });
 });
 
 //user profile

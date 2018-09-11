@@ -349,3 +349,42 @@ Started : GET : /url for ::1 at Sat Sep 08 2018 16:00:46 GMT+0530 (India Standar
 Started : GET : /users for ::1 at Sat Sep 08 2018 16:01:18 GMT+0530 (India Standard Time)
               Completed : 200 in  15.329ms 
 
+Started : GET : /url for ::1 at Tue Sep 11 2018 12:21:39 GMT+0530 (India Standard Time)
+              Completed : 401 in  20.456ms 
+
+Started : POST : /url for ::1 at Tue Sep 11 2018 12:24:48 GMT+0530 (India Standard Time)
+              Completed : 401 in  1.684ms 
+
+Started : POST : /url for ::1 at Tue Sep 11 2018 12:31:41 GMT+0530 (India Standard Time)
+              Completed : 401 in  12.503ms 
+
+Started : POST : /users for ::1 at Tue Sep 11 2018 12:35:55 GMT+0530 (India Standard Time)
+              Completed : 200 in  788.204ms 
+
+Started : POST : /users/logout for ::1 at Tue Sep 11 2018 12:39:06 GMT+0530 (India Standard Time)
+              Completed : 404 in  2.560ms 
+
+Started : POST : /users/login for ::1 at Tue Sep 11 2018 12:39:59 GMT+0530 (India Standard Time)
+              Completed : 200 in  634.045ms 
+
+Started : POST : /users/logi for ::1 at Tue Sep 11 2018 12:41:01 GMT+0530 (India Standard Time)
+              Completed : 404 in  0.731ms 
+
+Started : POST : /users for ::1 at Tue Sep 11 2018 12:41:07 GMT+0530 (India Standard Time)
+              Completed : 200 in  435.039ms 
+
+Started : POST : / for ::1 at Tue Sep 11 2018 12:42:23 GMT+0530 (India Standard Time)
+              Completed : 404 in  0.531ms 
+
+Started : POST : /url for ::1 at Tue Sep 11 2018 12:42:40 GMT+0530 (India Standard Time)
+              Completed : 200 in  109.552ms 
+
+Started : DELETE : /users/logout for ::1 at Tue Sep 11 2018 12:46:13 GMT+0530 (India Standard Time)
+              Completed : 200 in  48.267ms 
+
+Started : POST : /users/login for ::1 at Tue Sep 11 2018 12:46:57 GMT+0530 (India Standard Time)
+              Completed : 200 in  452.849ms 
+
+Started : POST : /url for ::1 at Tue Sep 11 2018 12:48:26 GMT+0530 (India Standard Time)
+              Completed : 200 in  15.726ms 
+
