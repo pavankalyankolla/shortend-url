@@ -34,6 +34,15 @@ router.get('/',authenticateUser,(req,res) => {
     })
 });
 
+//user having how many urls
+router.get('/urls',authenticateUser,(req,res) => {
+    Url.find({user : req.locals.user._id}).then((url) => {
+        res.send(url);
+    }) .catch((err) => {
+        res.send(err);
+    })
+})
+
 router.get('/:id',authenticateUser,(req,res) => {
     Url.findById((req.params.id),{clicks : {$slice : 3}}).then((url) => {
         res.send(url);

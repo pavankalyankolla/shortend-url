@@ -388,3 +388,99 @@ Started : POST : /users/login for ::1 at Tue Sep 11 2018 12:46:57 GMT+0530 (Indi
 Started : POST : /url for ::1 at Tue Sep 11 2018 12:48:26 GMT+0530 (India Standard Time)
               Completed : 200 in  15.726ms 
 
+Started : GET : /urls for ::1 at Tue Sep 11 2018 13:06:38 GMT+0530 (India Standard Time)
+              Completed : 404 in  11.244ms 
+
+Started : GET : /url/urls for ::1 at Tue Sep 11 2018 13:06:50 GMT+0530 (India Standard Time)
+              Completed : 200 in  90.125ms 
+
+Started : GET : /url/urls for ::1 at Tue Sep 11 2018 13:07:20 GMT+0530 (India Standard Time)
+              Completed : 200 in  1758.850ms 
+
+Started : GET : /users/me for ::1 at Tue Sep 11 2018 13:13:00 GMT+0530 (India Standard Time)
+              Completed : 200 in  109.307ms 
+
+Started : GET : /users/me for ::1 at Tue Sep 11 2018 13:13:32 GMT+0530 (India Standard Time)
+              Completed : 200 in  102.869ms 
+
+Started : GET : /users/me for ::1 at Tue Sep 11 2018 13:14:25 GMT+0530 (India Standard Time)
+              Completed : 401 in  5.912ms 
+
+Started : GET : /users/me for ::1 at Tue Sep 11 2018 13:14:35 GMT+0530 (India Standard Time)
+              Completed : 200 in  16.324ms 
+
+Started : GET : /users/me for ::1 at Tue Sep 11 2018 13:16:28 GMT+0530 (India Standard Time)
+              Completed : 200 in  1224.983ms 
+
+Started : GET : /users/me for ::1 at Tue Sep 11 2018 13:17:41 GMT+0530 (India Standard Time)
+              Completed : 200 in  2094.679ms 
+
+Started : GET : /users/me for ::1 at Tue Sep 11 2018 13:23:46 GMT+0530 (India Standard Time)
+              Completed : 500 in  1931.230ms 
+
+Started : GET : /users/me for ::1 at Tue Sep 11 2018 13:24:47 GMT+0530 (India Standard Time)
+              Completed : 200 in  1571.691ms 
+
+Started : GET : /users/me for ::ffff:127.0.0.1 at Tue Sep 11 2018 13:34:07 GMT+0530 (India Standard Time)
+              Completed : undefined in  undefinedms 
+
+Started : GET : /users/me for ::1 at Tue Sep 11 2018 13:36:00 GMT+0530 (India Standard Time)
+              Completed : undefined in  undefinedms 
+
+Started : GET : /users/me for ::1 at Tue Sep 11 2018 13:36:00 GMT+0530 (India Standard Time)
+              Completed : undefined in  undefinedms 
+
+Started : GET : /users/me for ::ffff:127.0.0.1 at Tue Sep 11 2018 13:36:09 GMT+0530 (India Standard Time)
+              Completed : 200 in  2093.933ms 
+
+Started : GET : /users/profile for ::1 at Tue Sep 11 2018 13:36:46 GMT+0530 (India Standard Time)
+              Completed : 200 in  15.222ms 
+
+Started : GET : /users/me for ::1 at Tue Sep 11 2018 13:36:56 GMT+0530 (India Standard Time)
+              Completed : 200 in  8.585ms 
+
+Started : DELETE : /users/logout for ::1 at Tue Sep 11 2018 13:56:02 GMT+0530 (India Standard Time)
+              Completed : 500 in  85.462ms 
+
+Started : DELETE : /users/logout for ::ffff:127.0.0.1 at Tue Sep 11 2018 13:56:23 GMT+0530 (India Standard Time)
+              Completed : 200 in  2115.798ms 
+
+Started : POST : /users/login for ::1 at Tue Sep 11 2018 14:00:14 GMT+0530 (India Standard Time)
+              Completed : 200 in  611.784ms 
+
+Started : DELETE : /users/logout for ::1 at Tue Sep 11 2018 14:00:49 GMT+0530 (India Standard Time)
+              Completed : 200 in  13.374ms 
+
+Started : GET : /url/urls for ::1 at Tue Sep 11 2018 14:01:42 GMT+0530 (India Standard Time)
+              Completed : 200 in  25.741ms 
+
+Started : DELETE : /users/logout for ::1 at Tue Sep 11 2018 14:01:52 GMT+0530 (India Standard Time)
+              Completed : 200 in  7.732ms 
+
+Started : GET : /users for ::1 at Tue Sep 11 2018 14:03:26 GMT+0530 (India Standard Time)
+              Completed : 200 in  10.304ms 
+
+Started : DELETE : /users/logout for ::1 at Tue Sep 11 2018 14:03:40 GMT+0530 (India Standard Time)
+              Completed : 200 in  8.200ms 
+
+Started : POST : /users/login for ::1 at Tue Sep 11 2018 14:03:46 GMT+0530 (India Standard Time)
+              Completed : 200 in  424.388ms 
+
+Started : GET : /users for ::ffff:127.0.0.1 at Tue Sep 11 2018 14:04:45 GMT+0530 (India Standard Time)
+              Completed : 200 in  96.959ms 
+
+Started : DELETE : /users/logout for ::1 at Tue Sep 11 2018 14:05:03 GMT+0530 (India Standard Time)
+              Completed : 200 in  25.219ms 
+
+Started : GET : /users for ::1 at Tue Sep 11 2018 14:05:10 GMT+0530 (India Standard Time)
+              Completed : 200 in  22.552ms 
+
+Started : GET : /users for ::1 at Tue Sep 11 2018 14:07:20 GMT+0530 (India Standard Time)
+              Completed : 401 in  13.305ms 
+
+Started : GET : /users for ::1 at Tue Sep 11 2018 14:07:25 GMT+0530 (India Standard Time)
+              Completed : 200 in  87.221ms 
+
+Started : GET : /url/urls for ::1 at Tue Sep 11 2018 14:07:49 GMT+0530 (India Standard Time)
+              Completed : 200 in  27.886ms 
+

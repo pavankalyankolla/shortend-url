@@ -7,7 +7,7 @@ const router = express.Router();
 // router.get('/',(req,res) => {
 //     res.send('welcome to users');
 // })
-router.get('/',(req,res) => {
+router.get('/',authenticateUser,(req,res) => {
     User.find().then((user) => {
         res.send(user);
     }) .catch((err) => {
@@ -64,12 +64,18 @@ router.delete('/logout',authenticateUser,(req,res) => {
     }) .catch((err) => {
         res.send(err);
     });
+    // User.findByIdAndUpdate({_id : req.locals.user},{$pull : {tokens : req.locals.token} }, {new : true})
+    // .then((user) => {
+    //     res.send(user);
+    // }) .catch((err) => {
+    //     res.send(err);
+    // });
 });
 
 //user profile
 router.get('/profile',authenticationUser,(req,res) => {
     res.send(req.locals.user);
-})
+});
 
 
 module.exports = {
